@@ -10,6 +10,7 @@ import {
   User,
   X
 } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 const STORAGE_KEY = "nova-chat-history";
 
@@ -239,7 +240,11 @@ function App() {
                         }`}
                     >
                       <div className="message-content text-sm leading-7 text-slate-200">
-                        {message.text}
+                        {message.role === "model" ? (
+                          <ReactMarkdown>{message.text}</ReactMarkdown>
+                        ) : (
+                          message.text
+                        )}
                       </div>
 
                       {message.role === "model" && (
