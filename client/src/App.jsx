@@ -119,9 +119,8 @@ function App() {
 
       {/* Sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-40 flex w-72 flex-col border-r border-slate-800 bg-slate-950 p-4 transition-transform md:static md:translate-x-0 ${
-          sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed inset-y-0 left-0 z-40 flex w-72 flex-col border-r border-slate-800 bg-slate-950 p-4 transition-transform md:static md:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         <div className="mb-5 flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -224,9 +223,8 @@ function App() {
                 {messages.map((message, index) => (
                   <div
                     key={index}
-                    className={`flex gap-3 ${
-                      message.role === "user" ? "justify-end" : "justify-start"
-                    }`}
+                    className={`flex gap-3 ${message.role === "user" ? "justify-end" : "justify-start"
+                      }`}
                   >
                     {message.role === "model" && (
                       <div className="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-indigo-500/15 text-indigo-400">
@@ -235,11 +233,10 @@ function App() {
                     )}
 
                     <div
-                      className={`group max-w-[85%] ${
-                        message.role === "user"
+                      className={`group max-w-[85%] ${message.role === "user"
                           ? "rounded-2xl rounded-br-md bg-indigo-600 px-4 py-3"
                           : "min-w-0"
-                      }`}
+                        }`}
                     >
                       <div className="message-content text-sm leading-7 text-slate-200">
                         {message.text}
